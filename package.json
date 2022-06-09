@@ -1,6 +1,6 @@
 {
   "name": "1688-open-sdk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "1688开放平台node SDK",
   "keywords": ["1688", "1688开放平台"],
   "main": "dist/1688-open-sdk.umd.js",

@@ -6,7 +6,8 @@ describe('ApiExecutor test', () => {
   it('ApiExecutor is instantiable', () => {
     console.log('process.env.APPSECRET', process.env)
     if (process.env.APPKEY && process.env.APPSECRET) {
-      expect(new ApiExecutor(process.env.APPKEY, process.env.APPSECRET)).toBeInstanceOf(ApiExecutor)
+      const apiExecutor = new ApiExecutor(process.env.APPKEY, process.env.APPSECRET)
+      expect(apiExecutor).toBeInstanceOf(ApiExecutor)
     }
   })
 })

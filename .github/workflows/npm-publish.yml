@@ -12,6 +12,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: SET env
+        env: 
+          APPKEY: ${{secrets.appkey}}
+          APPSECRET: ${{secrets.appsecret}}
+      - run: export APPKEY="${APPKEY}"
+      - run: export APPSECRET="${APPSECRET}"
+      - run: export aaa="12345"
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
@@ -32,7 +39,3 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-          APPKEY: ${{secrets.appkey}}
-          APPSECRET: ${{secrets.appsecret}}
-      - run: export APPKEY="${APPKEY}"
-      - run: export APPSECRET="${APPSECRET}"

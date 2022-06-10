@@ -34,3 +34,5 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
           APPKEY: ${{secrets.appkey}}
           APPSECRET: ${{secrets.appsecret}}
+      - run: APPKEY="${APPKEY}"
+      - run: APPSECRET="${APPSECRET}"
